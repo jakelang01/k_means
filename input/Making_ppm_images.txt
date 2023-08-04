@@ -1,0 +1,10 @@
+Howdy, this file has information on making a new image file for your program.
+As the code I provided very specifically only accepts .ppm image formats (and old-style "P3" ppm images in particular) it can be difficult for you to get personal images prepared for this program. While there are online PPM image generators, these typically output a newer image format that my image reading code cannot read. You are free to try to write an image loader for that format, but I wouldn't bother. Instead, the following command, run on any linux computer, can help you convert any image into an acceptable ppm image:
+
+convert <input file name> -resize <size> -compress none <output file name>
+
+Notes: 
+  * The <input file name> should be replaced with the full filename, and if necissary path to file, for your image file.
+  * The <size> should be of the format 800x800. This will scale your image to fit that size. The "large" images were prepared with 1024x1024, the medium were 800x800, the small were 460x460 and the tiny were 240x240. If you don't resize you will probably make a really big image that is slow to process, your choice.
+  * the output file name should be end in .ppm.
+
